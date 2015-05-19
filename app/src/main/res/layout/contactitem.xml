@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anuraag Yachamaneni"
+        android:id="@+id/username"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:layout_alignStart="@+id/userImage"
+        android:layout_alignLeft="@+id/userImage"
+         />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/userImage"
+        android:src="@drawable/user"
+        android:layout_alignParentTop="true"
+         />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:id="@+id/locationimage"
+        android:src="@drawable/waypoint"
+        android:layout_marginLeft="60dp"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="7dp"
+        />
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:id="@+id/distanceimage"
+        android:src="@drawable/plane"
+        android:layout_alignTop="@+id/locationimage"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Washington DC"
+        android:id="@+id/usercity"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="6dp"
+        android:textSize="11sp"
+        android:layout_below="@+id/username"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100 miles"
+        android:id="@+id/distancetext"
+        android:textSize="11sp"
+        android:layout_alignBottom="@+id/distanceimage"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/distanceimage"
+        android:layout_toEndOf="@+id/distanceimage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O+"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/mybutton"
+        android:id="@+id/bloodtype"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="22dp"
+        android:layout_above="@+id/distanceimage"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
