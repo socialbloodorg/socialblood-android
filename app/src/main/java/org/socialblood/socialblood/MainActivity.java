@@ -5,14 +5,24 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
+
+import java.util.Collections;
+import java.util.List;
 
 
 public class MainActivity extends Activity {
-
+    private ListView contacts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ContactImporter.importContacts(this);
+        contacts = (ListView)findViewById(R.id.listView);
+        List<Contact> importContacts = ContactImporter.importContacts(getApplicationContext());
+        Collections.sort(importContacts);
+        ContactAdapter contactAdapter = new ContactAdapter(MainActivity.this,importContacts);
+        contacts.setAdapter(contactAdapter);
     }
 
     @Override

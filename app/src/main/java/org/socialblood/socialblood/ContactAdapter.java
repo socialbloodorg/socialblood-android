@@ -1,6 +1,14 @@
 package org.socialblood.socialblood;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,19 +16,40 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * Created by Anuraag on 5/19/15.
  */
-public class ContactAdapter extends ArrayAdapter<Contact> {
+public class ContactAdapter extends ArrayAdapter<Contact>{
         private TextView name,city,distance,bloodtype;
         private ImageView pfp;
-        public ContactAdapter(Context context, ArrayList<Contact> contactArrayList) {
+        public ContactAdapter(Context context, List<Contact> contactArrayList) {
             super(context, 0, contactArrayList);
         }
 
-        @Override
+    public static Bitmap getclip(Bitmap bitmap) {
+        Bitmap output = Bitmap.createBitmap(bitmap.getWidth(),
+                bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(output);
+
+        final Paint paint = new Paint();
+        final Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
+
+        paint.setAntiAlias(true);
+        canvas.drawARGB(0, 0, 0, 0);
+        canvas.drawCircle(bitmap.getWidth() / 2, bitmap.getHeight() / 2,
+                bitmap.getWidth() / 2, paint);
+        paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+        canvas.drawBitmap(bitmap, rect, rect, paint);
+        return output;
+    }
+
+
+    @Override
         public View getView(int position, View rootView, ViewGroup parent) {
             // Get the data item for this position
             Contact contact = getItem(position);
@@ -40,9 +69,31 @@ public class ContactAdapter extends ArrayAdapter<Contact> {
             city.setText(contact.getLocation());
             distance.setText(contact.getDistance());
             bloodtype.setText(contact.getBloodType());
-            pfp.setImageDrawable(contact.getProfilePicture());
+
+//        if(contact.getProfilePicture()!= null) {
+//                pfp.setImageURI(contact.getProfilePicture());
+//                Log.d("Pro",contact.getProfilePicture().toString());
+            try {
+                Bitmap bmp = BitmapFactory.decodeStream(getContext().getContentResolver().openInputStream(contact.getProfilePicture()));
+                pfp.setImageBitmap(getclip(bmp));
+
+            }catch (FileNotFoundException f) {
+                Log.d(f.toString(),f.toString());
+                pfp.setImageResource(R.drawable.user);
+
+            }catch (NullPointerException n) {
+                Log.d(n.toString(),n.toString());
+                pfp.setImageResource(R.drawable.user);
+
+            }
+//        }else{
+//                pfp.setImageResource(R.drawable.user);
+//            }
 
 
         return rootView;
     }
+
+
+
 }
