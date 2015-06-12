@@ -7,15 +7,26 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+import com.digits.sdk.android.Digits;
+import com.twitter.sdk.android.core.TwitterAuthConfig;
+import com.twitter.sdk.android.core.TwitterCore;
+import io.fabric.sdk.android.Fabric;
 import java.util.Collections;
 import java.util.List;
 
 
 public class MainActivity extends Activity {
+
+    // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
+    private static final String TWITTER_KEY = "QbKnau4ImR08iAGfGvjwSJCa3";
+    private static final String TWITTER_SECRET = "yINVRZDu5Ksgkykon0BIkgarxTGm4VP92AbMloKaEZJvAM75Vr";
+
     private ListView contacts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
+        Fabric.with(this, new TwitterCore(authConfig), new Digits());
         setContentView(R.layout.activity_main);
         ContactImporter.importContacts(this);
         contacts = (ListView)findViewById(R.id.listView);
