@@ -25,8 +25,12 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ParseManager.init(this);
+
         TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
         Fabric.with(this, new TwitterCore(authConfig), new Digits());
+
         setContentView(R.layout.activity_main);
         ContactImporter.importContacts(this);
         contacts = (ListView)findViewById(R.id.listView);
