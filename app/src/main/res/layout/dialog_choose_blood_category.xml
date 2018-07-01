@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_title"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/choose_blood_type_title"-->
+        <!--android:layout_marginLeft="@dimen/margin_medium"-->
+        <!--android:layout_marginTop="@dimen/margin_medium"-->
+        <!--android:textSize="@dimen/text_large"-->
+        <!--android:textColor="@color/colorPrimary"/>-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/iv_close"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/ic_close_24dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginTop="@dimen/margin_medium"-->
+        <!--android:layout_marginRight="@dimen/margin_medium"/>-->
+
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_button_height"
+        android:text="Select a blood group from the list below"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:paddingLeft="@dimen/margin_medium"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="@dimen/margin_medium"/>
+
+    <ListView
+        android:id="@+id/blood_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_description">
+
+    </ListView>
+
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_button_height"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        android:background="@drawable/default_button"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_below="@+id/blood_list"/>
+</RelativeLayout>

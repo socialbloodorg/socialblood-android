@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D02B27</color>
+    <color name="colorPrimaryDark">#b32522</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+    <color name="colorAccent">#D02B27</color>
+
+    <color name="login_btn_bg">#D02B27</color>
+    <color name="colorFacebook">#43609c</color>
+    <color name="white">#FFF</color>
+    <color name="default_btn_bg">#D02B27</color>
+
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_dark_gray">#101010</color>
+    <color name="text_blue">#45a5e6</color>
+    <color name="gray">#dedbdb</color>
+</resources>

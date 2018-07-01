@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_medium">
+
+    <ImageView
+        android:id="@+id/hospital"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/hospital_icon"/>
+
+    <TextView
+        android:id="@+id/tv_hospital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hospital"
+        android:layout_toRightOf="@+id/hospital"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="100dp"
+        android:textSize="@dimen/text_medium"
+        android:textColor="@color/text_dark_gray"/>
+
+    <ImageView
+        android:id="@+id/address"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_location_s"
+        android:layout_below="@+id/tv_hospital"
+        android:layout_toRightOf="@+id/hospital"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="3dp"/>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upper Kyi Myin Daing Road"
+        android:textSize="14sp"
+        android:layout_below="@+id/tv_hospital"
+        android:layout_toRightOf="@id/address"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="2dp"/>
+
+
+    <ImageView
+        android:id="@+id/distance"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/ic_navi_hdpi"
+        android:layout_below="@+id/tv_address"
+        android:layout_toRightOf="@+id/hospital"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"/>
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 km"
+        android:textSize="14sp"
+        android:layout_below="@+id/tv_address"
+        android:layout_toRightOf="@id/distance"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginLeft="4dp"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium">
+        <ImageView
+            android:id="@+id/iv_call"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_call_24dp" />
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

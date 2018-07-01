@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="8dp">
+
+        <RelativeLayout
+            android:id="@+id/header_container"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            >
+
+          <FrameLayout
+              android:id="@+id/image"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/margin_medium"
+              android:layout_marginLeft="@dimen/margin_small">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/candidate_avatar"
+                android:layout_marginRight="@dimen/margin_small"/>
+
+            <co.nexlabs.socialblood.view.CircularTextView
+                android:id="@+id/tv_blood_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AB"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:padding="@dimen/margin_small"
+                android:layout_gravity="right|bottom"
+                android:layout_marginRight="@dimen/margin_small"/>
+
+          </FrameLayout>
+
+          <LinearLayout
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:orientation="vertical"
+              android:layout_toRightOf="@+id/image"
+              android:layout_marginLeft="@dimen/margin_medium">
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Darrel Wilson"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/text_dark_gray"
+                android:layout_marginTop="@dimen/margin_large"/>
+
+
+            <TextView
+                android:id="@+id/tv_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="09254549405"
+                android:textSize="@dimen/text_tiny"
+                android:textColor="@color/text_blue"/>
+
+          </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_logo"
+            android:layout_below="@+id/header_container"
+            android:layout_marginTop="@dimen/margin_icon"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_icon"/>
+
+        <TextView
+            android:id="@+id/tv_blood_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_height"
+            android:text="Blood Type"
+            android:layout_below="@+id/header_container"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/logo"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_below="@+id/tv_blood_type"
+            android:layout_toRightOf="@+id/logo"/>
+
+
+        <ImageView
+            android:id="@+id/phone"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_call_24dp_primary_color"
+            android:layout_below="@+id/logo"
+            android:layout_marginTop="@dimen/margin_icon"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_icon"/>
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_height"
+            android:text="Phone Number"
+            android:layout_below="@+id/tv_blood_type"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/phone"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_below="@+id/tv_phone"
+            android:layout_toRightOf="@+id/phone"/>
+
+        <ImageView
+            android:id="@+id/location"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_location"
+            android:layout_below="@+id/phone"
+            android:layout_marginTop="@dimen/margin_icon"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_icon"/>
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_height"
+            android:text="Location"
+            android:layout_below="@+id/tv_phone"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/location"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_below="@+id/tv_location"
+            android:layout_toRightOf="@+id/logo"/>
+
+        <ImageView
+            android:id="@+id/dob"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_dob"
+            android:layout_below="@+id/location"
+            android:layout_marginTop="@dimen/margin_icon"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_icon"/>
+
+        <TextView
+            android:id="@+id/tv_dob"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_height"
+            android:text="Date of Birth"
+            android:layout_below="@+id/tv_location"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/dob"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_below="@+id/tv_dob"
+            android:layout_toRightOf="@+id/logo"/>
+
+        <ImageView
+            android:id="@+id/gender"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_gender"
+            android:layout_below="@+id/dob"
+            android:layout_marginTop="@dimen/margin_icon"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_icon"/>
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_height"
+            android:text="Gender"
+            android:layout_below="@+id/tv_dob"
+            android:layout_toRightOf="@+id/gender"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_below="@+id/tv_gender"
+            android:layout_toRightOf="@+id/gender"/>
+
+
+        <ImageView
+            android:id="@+id/pet"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_pet"
+            android:layout_below="@+id/gender"
+            android:layout_marginTop="@dimen/margin_icon"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_icon"/>
+
+        <TextView
+            android:id="@+id/tv_pet"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_height"
+            android:text="Pet"
+            android:layout_below="@+id/tv_gender"
+            android:layout_toRightOf="@+id/pet"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_below="@+id/tv_pet"
+            android:layout_toRightOf="@+id/pet"/>
+
+
+        <ImageView
+            android:id="@+id/email"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_email_24dp"
+            android:layout_below="@+id/pet"
+            android:layout_marginTop="@dimen/margin_icon"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_icon"/>
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_height"
+            android:text="myozawoo@nexlabs.co"
+            android:layout_below="@+id/tv_pet"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/email"
+            android:textColor="@color/text_dark_gray"
+            android:textSize="16sp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_below="@+id/tv_email"
+            android:layout_toRightOf="@+id/email"/>
+
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/default_button_height"
+            android:text="Logout"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:layout_below="@+id/tv_email"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_huge"
+            android:layout_marginRight="@dimen/margin_huge"
+            android:gravity="center"
+            android:layout_gravity="center"
+            />
+
+
+      </RelativeLayout>
+
+    </ScrollView>
+
+
+  </FrameLayout>
+>>>>>>> 5faa42a... Fine tuning
+
+</LinearLayout>

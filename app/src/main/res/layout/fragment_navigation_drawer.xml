@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+
+    <RelativeLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        >
+
+        <FrameLayout
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/nav_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/candidate_avatar"
+                android:layout_marginRight="@dimen/margin_small"/>
+
+            <co.nexlabs.socialblood.view.CircularTextView
+                android:id="@+id/nav_blood_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A+"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                android:padding="@dimen/margin_small"
+                android:layout_gravity="right|bottom"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/image"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium">
+
+
+            <TextView
+                android:id="@+id/nav_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Darrel Wilson"
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="@dimen/margin_large" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@drawable/green_dot"
+                    android:layout_gravity="center_vertical"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ready to donate"
+                    android:textSize="@dimen/text_tiny"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginLeft="@dimen/margin_small"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nav_header_container"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"/>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:textColor="@color/white"
+        android:background="@drawable/default_button"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_large"/>
+
+
+</RelativeLayout>

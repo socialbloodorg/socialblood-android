@@ -1,6 +1,60 @@
 <resources>
-    <string name="app_name">SocialBlood</string>
+    <string name="app_name">CCT</string>
+    <string name="facebook_app_id">253392158330429</string>
+    <string name="google_api_key">AIzaSyDTJCB-ftdJl9A-DdLixTpjQKNAt5qvL-g</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="logout">Logout</string>
+    <string name="fb_login_button">Log in With Facebook</string>
+    <string name="email_signup_button">Sign Up With Email</string>
+    <string name="signin_button">Sign In</string>
+    <string name="forgot_password"></string>
+    <string name="email_signup">Sign Up With Email</string>
+    <string name="choose_pet_title">Do you have any pets?</string>
+    <string name="choose_blood_type_title">Choose a Blood Type</string>
+    <string name="choose_blood_rh_type_title">Choose Blood RH Type</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="nav_item_search_donors">Search Donors</string>
+    <string name="nav_item_profile">Profile</string>
+    <string name="nav_item_about">About</string>
+
+    <string name="nav_icon_search">ic_search</string>
+    <string name="nav_icon_profile">ic_profile</string>
+    <string name="nav_icon_about">ic_about</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_search_donors</item>
+        <item>@string/nav_item_profile</item>
+    </string-array>
+
+    <!--navigation drawer item icon-->
+    <string-array name="nav_drawer_icons">
+        <item>@mipmap/ic_search</item>
+        <item>@mipmap/ic_profile</item>
+    </string-array>
+
+
+    <string name="title_messages">Messages</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_home">Home</string>
+
+    <string name="select_blood_type">Select the blood type \nyou need</string>
+    <string name="search">Search</string>
+
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_password">Password must between 8 and 16 characters</string>
+    <string name="err_msg_name">Enter the name</string>
+    <string name="err_msg_phone">Enter the phone</string>
+    <string name="err_matching_two_password">Passwords must be same</string>
+    <string name="blood_request">We need your blood</string>
+    <string name="location">Location</string>
+    <string name="mobile">Mobile</string>
+    <string name="about">About</string>
+
 </resources>
